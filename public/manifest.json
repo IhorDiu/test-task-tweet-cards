@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Tweet Cards",
+  "name": "Create Tweet Cards",
   "icons": [
     {
       "src": "favicon.ico",
