@@ -112,7 +112,7 @@ height: 50px;
 left: 92px;
 top: 374px;
 
-background: #EBD8FF;
+// background: #EBD8FF;
 box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
 border-radius: 10.3108px;
 
@@ -123,21 +123,8 @@ font-size: 18px;
 line-height: 22px;
 
 text-transform: uppercase;
+cursor: pointer;
 
 color: #373737;
 `
 
-
-
-// line-height: 1.2;
-// text-transform: uppercase;
-// padding: ${props =>
-//   props.colorType ? "14px 39px" : "14px 56px"}; ;
-// margin-top: 26px;
-// border-radius:  ${p => p.theme.radii.tiny};
-// background: ${props =>
-//   props.colorType ? props.theme.colors.green : props.theme.colors.aceent};
-// box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-// border: none;
-// transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// `

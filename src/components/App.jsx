@@ -1,3 +1,4 @@
+import { useToggleFollowers } from 'hooks/useToggleFollowers';
 import logo from 'img/Logo.png';
 import bg_img from 'img/bg_img.png';
 import avatar from 'img/Hansel.png';
@@ -15,6 +16,10 @@ import {
 } from './App.styled';
 
 export const App = () => {
+  const { btnLabel, getBgColor, toggle, counterFollowers } =
+    useToggleFollowers();
+  const number = 100500;
+
   return (
     <Card>
       <Logo src={logo} alt="Logo" />
@@ -24,8 +29,14 @@ export const App = () => {
         <Avatar src={avatar} alt="Avatar" />
       </Ellipse>
       <Tweets>777 tweets</Tweets>
-      <Followers>100,500 Followers</Followers>
-      <Button>Follow</Button>
+      <Followers>{counterFollowers(number)} Followers</Followers>
+      <Button
+        type="button"
+        onClick={toggle}
+        style={{ background: getBgColor() }}
+      >
+        {btnLabel()}
+      </Button>
     </Card>
   );
 };
