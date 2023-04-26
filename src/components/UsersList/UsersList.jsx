@@ -81,7 +81,7 @@ const UsersList = () => {
     setStatusFilter(filter);
   };
 
-  console.log('statusFilter', statusFilter);
+ 
 
   const getVisibleTasks = () => {
     const followingsId = followersList.map(({ id }) => id);
