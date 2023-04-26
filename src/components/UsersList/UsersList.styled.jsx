@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Container = styled.ul`
 list-style: none;
 padding: 0;
@@ -20,3 +21,16 @@ export const AppBox = styled.div`
     padding-bottom: 24px;
     
   `;
+
+
+
+
+export const Wrapper = styled.div`
+width: 100px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 20px;
+    
+  }
+`;
+

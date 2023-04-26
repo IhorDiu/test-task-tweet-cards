@@ -14,9 +14,17 @@ import {
   Button,
 } from './UserCard.styled';
 
-export const UserCard = ({ user, tweets, followers, avatar }) => {
+export const UserCard = ({ userCard, isFollower, followersList }) => {
+  const { user, avatar, tweets, followers } = userCard;
+
+  const isFollowing = followersList.some(({ id }) => id === userCard.id);
   const { btnLabel, getBgColor, toggle, counterFollowers } =
-    useToggleFollowers();
+    useToggleFollowers(isFollowing);
+
+  const handleFollower = () => {
+    isFollower(userCard);
+    toggle();
+  };
 
   return (
     <Card>
@@ -26,11 +34,11 @@ export const UserCard = ({ user, tweets, followers, avatar }) => {
       <Ellipse>
         <Avatar src={avatar} alt={user} />
       </Ellipse>
-      <Tweets>{tweets} tweets</Tweets>
-      <Followers>{counterFollowers(followers)} Followers</Followers>
+      <Tweets>{tweets.toLocaleString('en-US')} tweets</Tweets>
+      <Followers>{counterFollowers(followers)} followers</Followers>
       <Button
         type="button"
-        onClick={toggle}
+        onClick={handleFollower}
         style={{ background: getBgColor() }}
       >
         {btnLabel()}
