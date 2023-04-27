@@ -78,7 +78,7 @@ export const Tweets = styled.p`
   top: 284px;
   margin: 0 0 16px 0;
 
-  font-family: 'Montserrat';
+  font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
