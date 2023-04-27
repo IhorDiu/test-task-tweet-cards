@@ -39,7 +39,7 @@ export const UserCard = ({ userCard, isFollower, followersList }) => {
       <Button
         type="button"
         onClick={handleFollower}
-        style={{ background: getBgColor() }}
+        style={{ backgroundColor: getBgColor() }}
       >
         {btnLabel()}
       </Button>

@@ -29,6 +29,8 @@ justify-content: center ;
   text-decoration: none;
   color: black;
   font-weight: 500;
+  border: ridge #5CD3A8;
+  border-width: 6px;
 
   &.active {
     color: white;
